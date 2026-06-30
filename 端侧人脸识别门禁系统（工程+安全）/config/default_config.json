@@ -1,0 +1,47 @@
+{
+  "camera": {
+    "source": 0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30
+  },
+  "detection": {
+    "backend": "opencv_haar",
+    "scale_factor": 1.1,
+    "min_neighbors": 5,
+    "min_face_size": [80, 80],
+    "confidence_threshold": 0.0
+  },
+  "recognition": {
+    "embedding_size": 128,
+    "match_threshold": 0.55,
+    "unknown_label": "UNKNOWN"
+  },
+  "liveness": {
+    "enabled": true,
+    "blink_frames_needed": 3,
+    "texture_var_threshold": 200.0
+  },
+  "access": {
+    "allow_unknown": false,
+    "gate_open_duration_sec": 3,
+    "cooldown_sec": 5
+  },
+  "audit": {
+    "log_file": "audit_logs/access_log.jsonl",
+    "snapshot_dir": "audit_logs/snapshots",
+    "retain_days": 30
+  },
+  "security": {
+    "max_failed_attempts": 5,
+    "lockout_duration_sec": 60,
+    "alert_on_lockout": true
+  },
+  "enrollment": {
+    "faces_dir": "enrolled_faces",
+    "index_file": "enrolled_faces/gallery_index.npz",
+    "min_enrollment_images": 3
+  },
+  "display": true,
+  "log_interval": 30
+}

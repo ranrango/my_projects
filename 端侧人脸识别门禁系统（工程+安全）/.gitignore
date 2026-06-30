@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Env
+.env
+.venv
+venv/
+env/
+
+# Model weights & large binaries
+*.pt
+*.pth
+*.onnx
+*.pkl
+models/
+
+# Enrolled faces (privacy — keep locally, never commit)
+enrolled_faces/
+
+# Audit logs (privacy / PII)
+audit_logs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

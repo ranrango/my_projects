@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual envs
+.env
+.venv
+venv/
+env/
+
+# Model weights (large binaries — download separately)
+*.pt
+*.pth
+*.onnx
+*.pkl
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.MOV
+*.mkv
+
+# Images that are build artifacts / debug outputs
+debug_*.jpg
+debug_*.png
+enhanced_*.jpg
+output*.jpg
+output*.png
+test_image.jpg
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.iml

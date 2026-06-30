@@ -1,0 +1,55 @@
+{
+  "source": "industrial_delivery_kit/test.MOV",
+  "model": "models/yolov8n.onnx",
+  "video": {
+    "frames_in_file": 822,
+    "frames_processed": 822,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080
+  },
+  "previous_model": {
+    "name": "previous_person_vehicle",
+    "target_classes": [
+      "person",
+      "car",
+      "bus",
+      "truck"
+    ],
+    "total_detections": 898,
+    "by_class": {
+      "car": 898
+    }
+  },
+  "current_model": {
+    "name": "current_red_box_extended_vehicle",
+    "target_classes": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck"
+    ],
+    "total_detections": 898,
+    "by_class": {
+      "car": 898
+    }
+  },
+  "difference": {
+    "additional_detections": 0,
+    "additional_by_class": {}
+  },
+  "runtime": {
+    "seconds": 781.515,
+    "fps": 1.052
+  },
+  "derived": {
+    "previous_frames_with_detection": 545,
+    "current_frames_with_detection": 545,
+    "previous_max_detections_per_frame": 4,
+    "current_max_detections_per_frame": 4,
+    "previous_avg_detections_per_frame": 1.092,
+    "current_avg_detections_per_frame": 1.092
+  }
+}

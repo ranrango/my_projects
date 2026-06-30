@@ -1,0 +1,45 @@
+{
+  "camera_id": "demo_camera_001",
+  "model_path": "models/yolov8n.onnx",
+  "source": "test.mp4",
+  "output_video": "runs/demo_output.mp4",
+  "event_jsonl": "runs/events.jsonl",
+  "snapshot_dir": "runs/snapshots",
+  "display": false,
+  "save_video": true,
+  "max_frames": 0,
+  "log_interval": 30,
+  "reconnect_attempts": 3,
+  "reconnect_delay_sec": 1.0,
+  "detector": {
+    "input_size": 640,
+    "conf_thres": 0.5,
+    "iou_thres": 0.45,
+    "target_class_ids": [0, 2, 5, 7]
+  },
+  "tracker": {
+    "track_thresh": 0.5,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "frame_rate": 30
+  },
+  "roi": {
+    "enabled": false,
+    "polygon": []
+  },
+  "anomaly": {
+    "enabled": true,
+    "person_class_id": 0,
+    "crowd_enabled": true,
+    "crowd_threshold": 3,
+    "crowd_radius": 100,
+    "crowd_duration_sec": 2.0,
+    "fall_enabled": true,
+    "fall_speed_thresh": 15,
+    "fall_ratio_thresh": 0.7,
+    "loitering_enabled": true,
+    "loitering_area": 50,
+    "loitering_duration_sec": 5.0,
+    "alert_cooldown_sec": 5.0
+  }
+}

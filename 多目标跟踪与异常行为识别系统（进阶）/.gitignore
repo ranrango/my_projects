@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Env
+.env
+.venv
+venv/
+env/
+
+# Model weights
+*.pt
+*.onnx
+*.pth
+models/
+
+# Video outputs
+runs/
+*.mp4
+*.avi
+*.mov
+*.MOV
+
+# Debug / scratch
+debug_*.jpg
+debug_*.png
+debug_result.jpg
+image.png
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

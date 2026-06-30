@@ -1,0 +1,14 @@
+services:
+  reid-api:
+    build: .
+    image: reid-baseline-api:latest
+    env_file:
+      - .env.example
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./checkpoints:/app/checkpoints:ro
+      - ./deploy:/app/deploy
+      - ./gallery:/app/gallery:ro
+    restart: unless-stopped
+

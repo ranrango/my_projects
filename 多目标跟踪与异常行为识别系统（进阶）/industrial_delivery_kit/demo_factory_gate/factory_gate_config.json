@@ -1,0 +1,51 @@
+{
+  "site_id": "demo_industrial_park",
+  "camera_id": "factory_gate_camera_01",
+  "source": "../../test.mp4",
+  "model_path": "../../models/yolov8n.onnx",
+  "output_dir": "../demo_factory_gate/runs",
+  "max_frames": 8,
+  "display": false,
+  "detector": {
+    "input_size": 640,
+    "conf_thres": 0.5,
+    "iou_thres": 0.45,
+    "target_class_ids": [0, 2, 5, 7]
+  },
+  "tracker": {
+    "track_thresh": 0.5,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "frame_rate": 30
+  },
+  "roi": {
+    "enabled": true,
+    "polygon": [[240, 60], [540, 70], [620, 210], [250, 220]]
+  },
+  "events": {
+    "save_jsonl": true,
+    "save_snapshots": true,
+    "save_video": true,
+    "cooldown_sec": 5
+  },
+  "anomaly": {
+    "enabled": true,
+    "person_class_id": 0,
+    "crowd_enabled": true,
+    "crowd_threshold": 3,
+    "crowd_radius": 100,
+    "crowd_duration_sec": 2,
+    "fall_enabled": true,
+    "fall_speed_thresh": 15,
+    "fall_ratio_thresh": 0.7,
+    "loitering_enabled": true,
+    "loitering_area": 50,
+    "loitering_duration_sec": 5
+  },
+  "deployment": {
+    "edge_cpu": "ONNX + OpenCV DNN / ONNX Runtime",
+    "intel_edge": "OpenVINO Runtime or OpenVINO Model Server",
+    "nvidia_edge": "DeepStream + TensorRT",
+    "gpu_server": "Triton Inference Server ensemble"
+  }
+}

@@ -1,0 +1,31 @@
+# 数据路径
+data:
+  root: /path/to/Market-1501-v15.09.15
+  num_classes: 751
+  image_size: [256, 128]
+
+# 模型设置
+model:
+  name: reid_baseline
+  backbone: resnet50
+  embedding_dim: 512
+  pretrained: true
+  checkpoint: checkpoints/reid_baseline.pth
+
+# 训练参数
+train:
+  batch_size: 32
+  num_epochs: 60
+  learning_rate: 0.0003
+  weight_decay: 0.0005
+  margin: 0.3
+  num_workers: 4
+  save_dir: checkpoints/
+
+# 推理参数
+inference:
+  query_mode: query
+  gallery_mode: gallery
+
+runtime:
+  device: auto
