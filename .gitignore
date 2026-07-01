@@ -10,9 +10,19 @@ build/
 
 # Virtual envs
 .env
+.env.*
+!.env.example
 .venv
 venv/
 env/
+
+# Local credentials / certificates
+*.key
+*.pem
+*.crt
+*.p12
+*.secret
+secrets.*
 
 # Model weights (large binaries — download separately)
 *.pt
@@ -37,6 +47,7 @@ test_image.jpg
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+*.ipynb
 
 # macOS
 .DS_Store
@@ -46,4 +57,5 @@ test_image.jpg
 # IDE
 .idea/
 .vscode/
+.claude/
 *.iml

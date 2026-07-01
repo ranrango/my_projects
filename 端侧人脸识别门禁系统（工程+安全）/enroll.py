@@ -3,15 +3,15 @@ enroll.py  —  人脸注册 CLI
 
 功能:
   1. 从目录批量注册: python enroll.py build  --faces-dir enrolled_faces
-  2. 摄像头采集并注册: python enroll.py capture --identity Alice --count 10
+  2. 摄像头采集并注册: python enroll.py capture --identity person_001 --count 10
   3. 列出已注册人员:    python enroll.py list
 
 目录结构约定（适用于 build 模式）:
   enrolled_faces/
-    Alice/
+    person_001/
       001.jpg
       002.jpg
-    Bob/
+    person_002/
       001.jpg
 """
 import argparse

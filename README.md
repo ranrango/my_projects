@@ -136,3 +136,4 @@ pip install -r <项目目录>/requirements.txt
 
 - 模型权重（`*.pt`、`*.onnx`、`*.pth`）、视频文件、数据集均不含在仓库中，需自行下载或导出
 - 人脸图片（`enrolled_faces/`）和访问日志（`audit_logs/`）属于隐私数据，已在 `.gitignore` 中排除
+- 文档中的身份、摄像头地址和 API Key 均使用占位符；请勿提交真实人员姓名、门禁照片、RTSP 账号、访问日志、云服务密钥或本机绝对路径

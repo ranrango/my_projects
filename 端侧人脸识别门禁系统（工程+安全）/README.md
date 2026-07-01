@@ -42,11 +42,11 @@ pip install -r requirements.txt
 
 ```
 enrolled_faces/
-  Alice/
+  person_001/
     001.jpg
     002.jpg
     003.jpg
-  Bob/
+  person_002/
     001.jpg
     ...
 ```
@@ -58,7 +58,7 @@ python enroll.py build
 **方式 B — 摄像头实时采集**:
 
 ```bash
-python enroll.py capture --identity Alice --count 10
+python enroll.py capture --identity person_001 --count 10
 # 按 SPACE 采集，Q 退出，自动重建图库
 ```
 
@@ -104,7 +104,7 @@ python validate_system.py
 `audit_logs/access_log.jsonl` 每行一条记录：
 
 ```json
-{"timestamp":"2026-06-30T10:00:00.123","event_type":"grant","identity":"Alice","frame_id":42,"score":0.812}
+{"timestamp":"2026-06-30T10:00:00.123","event_type":"grant","identity":"person_001","frame_id":42,"score":0.812}
 {"timestamp":"2026-06-30T10:00:05.456","event_type":"deny","identity":"UNKNOWN","frame_id":155,"score":0.21,"lockout_triggered":false}
 ```
 

@@ -93,13 +93,13 @@ def main():
         g = GalleryIndex()
         v = np.random.randn(944).astype(np.float32)
         v /= np.linalg.norm(v)
-        g.add(v, "Alice")
+        g.add(v, "person_001")
         with tempfile.TemporaryDirectory() as td:
             path = os.path.join(td, "test_gallery.npz")
             g.save(path)
             g2 = GalleryIndex.load(path)
         label, score = g2.search(v, threshold=0.5)
-        assert label == "Alice", f"Expected Alice, got {label}"
+        assert label == "person_001", f"Expected person_001, got {label}"
         return f"save/load/search OK score={score:.4f}"
     results.append(check("GalleryIndex: save/load/search", _gallery))
 
@@ -108,8 +108,8 @@ def main():
         from face_gate.security.guard import SecurityGuard
         g = SecurityGuard(max_failed=3, lockout_sec=10)
         for _ in range(3):
-            g.record_failure("bob")
-        assert g.is_locked("bob"), "bob should be locked"
+            g.record_failure("person_002")
+        assert g.is_locked("person_002"), "person_002 should be locked"
         return "lockout after 3 failures OK"
     results.append(check("SecurityGuard: lockout logic", _guard))
 
@@ -118,8 +118,8 @@ def main():
         from face_gate.security.access_controller import AccessController
         ac = AccessController(allow_unknown=False, gate_open_duration=3.0, cooldown_sec=0)
         assert ac.decide("UNKNOWN", 0.3) == "DENY"
-        assert ac.decide("Alice", 0.9) == "GRANT"
-        ac.open_gate("Alice", 3.0)
+        assert ac.decide("person_001", 0.9) == "GRANT"
+        ac.open_gate("person_001", 3.0)
         assert ac.gate_is_open
         return "deny-unknown, grant-known, gate-open OK"
     results.append(check("AccessController: grant/deny/gate", _ac))
@@ -133,10 +133,10 @@ def main():
                 log_file=os.path.join(td, "audit_logs", "test.jsonl"),
                 snapshot_dir=os.path.join(td, "snaps"),
             )
-            entry = logger.log("grant", "Alice", 42, score=0.9)
+            entry = logger.log("grant", "person_001", 42, score=0.9)
             with open(logger.log_file) as f:
                 line = json.loads(f.readline())
-            assert line["identity"] == "Alice"
+            assert line["identity"] == "person_001"
         return "write+read JSONL OK"
     results.append(check("AuditLogger: JSONL write/read", _audit))
 

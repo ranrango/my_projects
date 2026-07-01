@@ -50,7 +50,7 @@ python3 run_video.py --config config/default_config.json --no-display --max-fram
 使用 RTSP：
 
 ```bash
-python3 run_video.py --source "rtsp://user:password@ip:554/stream1" --no-display
+python3 run_video.py --source "rtsp://<username>:<password>@<camera-host>:554/stream1" --no-display
 ```
 
 使用本机摄像头：

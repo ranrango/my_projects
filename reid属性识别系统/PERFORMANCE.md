@@ -31,7 +31,7 @@ REID_DEFAULT_TOPK=5
 REID_MAX_TOPK=50
 REID_MAX_UPLOAD_MB=10
 REID_EXPOSE_PATHS=false
-REID_API_KEY=your-production-token
+REID_API_KEY="<set-a-strong-random-token>"
 ```
 
 阈值建议从业务数据上调，不要直接照搬 Market1501：
@@ -95,4 +95,3 @@ query feature -> faiss.search(topk)
 - 用 supervisor/systemd/docker compose 保活。
 - 记录 query 图片 ID、top-k 结果、score、latency，方便回溯。
 - 保留 checkpoint、配置文件和 gallery 索引版本号。
-

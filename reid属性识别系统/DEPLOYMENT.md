@@ -114,7 +114,7 @@ export REID_CHECKPOINT=checkpoints/reid_baseline.pth
 export REID_INDEX=deploy/gallery_index.npz
 export REID_DEVICE=cuda
 export REID_EXPOSE_PATHS=false
-export REID_API_KEY=change-me
+export REID_API_KEY="<set-a-strong-random-token>"
 
 uvicorn reid_baseline.deploy.api:app --host 0.0.0.0 --port 8000
 ```
@@ -129,7 +129,7 @@ curl http://127.0.0.1:8000/health
 
 ```bash
 curl -X POST "http://127.0.0.1:8000/search?topk=5" \
-  -H "X-API-Key: change-me" \
+  -H "X-API-Key: <set-a-strong-random-token>" \
   -F "file=@/path/to/query/person.jpg"
 ```
 
