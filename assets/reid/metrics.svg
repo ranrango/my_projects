@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="ReID metrics">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; }
+    .title { font: 700 32px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172033; }
+    .subtitle { font: 500 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #526173; }
+    .label { font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #243447; }
+    .value { font: 600 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #243447; }
+  </style>
+  <rect class="bg" width="960" height="420"/>
+  <rect class="panel" x="24" y="24" width="912" height="372" rx="8"/>
+  <text x="60" y="70" class="title">ReID Market1501 评估结果</text>
+  <text x="60" y="100" class="subtitle">10 轮训练记录，适合作品集展示和面试讨论</text>
+  <text x="70" y="135" class="label">mAP</text><rect x="190" y="112" width="620" height="28" rx="4" fill="#e5e7eb"/><rect x="190" y="112" width="346" height="28" rx="4" fill="#2f80ed"/><text x="830" y="135" class="value">0.5588</text><text x="70" y="193" class="label">Rank-1</text><rect x="190" y="170" width="620" height="28" rx="4" fill="#e5e7eb"/><rect x="190" y="170" width="493" height="28" rx="4" fill="#16a34a"/><text x="830" y="193" class="value">0.7957</text><text x="70" y="251" class="label">Rank-5</text><rect x="190" y="228" width="620" height="28" rx="4" fill="#e5e7eb"/><rect x="190" y="228" width="565" height="28" rx="4" fill="#f59e0b"/><text x="830" y="251" class="value">0.9121</text><text x="70" y="309" class="label">Rank-10</text><rect x="190" y="286" width="620" height="28" rx="4" fill="#e5e7eb"/><rect x="190" y="286" width="580" height="28" rx="4" fill="#dc2626"/><text x="830" y="309" class="value">0.9362</text>
+</svg>

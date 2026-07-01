@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="端侧人脸门禁系统">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; }
+    .title { font: 700 32px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172033; }
+    .subtitle { font: 500 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #526173; }
+    .item { font: 500 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #243447; }
+    .accent { fill: #7c3aed; }
+  </style>
+  <rect class="bg" width="960" height="420" rx="0"/>
+  <rect class="panel" x="24" y="24" width="912" height="372" rx="8"/>
+  <rect class="accent" x="24" y="24" width="12" height="372" rx="6"/>
+  <text x="60" y="70" class="title">端侧人脸门禁系统</text>
+  <text x="60" y="100" class="subtitle">注册、识别、活体、安全锁定、审计日志的完整闭环</text>
+  <text x="36" y="112" class="item">• 全链路自检 11/11 通过</text><text x="36" y="146" class="item">• 隐私目录 enrolled_faces 与 audit_logs 不入库</text><text x="36" y="180" class="item">• 边界：生产精度建议升级 ArcFace/MobileFaceNet</text>
+</svg>
