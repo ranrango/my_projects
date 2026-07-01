@@ -5,6 +5,32 @@
 
 ---
 
+## 作品集亮点
+
+| 项目 | 展示重点 | 可运行验证 | 适合讨论的问题 |
+|---|---|---|---|
+| 轻量 YOLOv8 检测 | ONNX/OpenCV CPU 推理 | `python run_video.py --video test.mp4 --no-display` | 预处理、NMS、边缘部署 |
+| MOT+异常识别 | ByteTrack、ROI、事件 JSONL | `python validate_system.py` | 跟踪匹配、报警规则、工业 PoC |
+| ReID 属性识别 | 训练、评估、图库检索、API | toy Market1501 链路 | Triplet Loss、mAP/Rank-k、服务化 |
+| 端侧人脸门禁 | 注册、活体、安全、审计闭环 | `python validate_system.py` | 端侧安全、隐私保护、升级路线 |
+
+## 可视化结果
+
+![轻量检测](assets/detection/overview.svg)
+![MOT 与异常识别](assets/mot-anomaly/overview.svg)
+![ReID 指标](assets/reid/metrics.svg)
+![端侧门禁流程](assets/face-gate/workflow.svg)
+
+## 一键验收
+
+```bash
+python3 scripts/validate_all.py
+```
+
+验收脚本会执行四个项目的 smoke checks，并额外扫描已跟踪文件中的密钥形态字符串、本机路径和示例口令。
+
+---
+
 ## 项目目录
 
 | # | 项目 | 核心技术 | 依赖 |
@@ -132,8 +158,10 @@ pip install -r <项目目录>/requirements.txt
 
 最低公共依赖：`opencv-python >= 4.8`，`numpy >= 1.21`
 
-## 说明
+## 资源与隐私
 
-- 模型权重（`*.pt`、`*.onnx`、`*.pth`）、视频文件、数据集均不含在仓库中，需自行下载或导出
-- 人脸图片（`enrolled_faces/`）和访问日志（`audit_logs/`）属于隐私数据，已在 `.gitignore` 中排除
-- 文档中的身份、摄像头地址和 API Key 均使用占位符；请勿提交真实人员姓名、门禁照片、RTSP 账号、访问日志、云服务密钥或本机绝对路径
+- 模型权重、原始视频、数据集和访问日志不放入 Git。
+- 可公开展示的小图、SVG 和结果图放入 `assets/`。
+- 外部资源放置方式见 [resources/README.md](resources/README.md)。
+- 面试官阅读路径见 [DELIVERY.md](DELIVERY.md)。
+- 文档中的身份、摄像头地址和 API Key 均使用示例值；请勿提交真实人员姓名、门禁照片、RTSP 账号、访问日志、云服务密钥或本机绝对路径。
