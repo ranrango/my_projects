@@ -61,9 +61,9 @@ PATTERNS = {
     "hardcoded api_key assignment": re.compile(
         r"api_key\\s*=\\s*[\\\"']sk-[A-Za-z0-9_-]{12,}[\\\"']"
     ),
-    "local user path": re.compile(r"/Users/randemac|file:///Users/randemac"),
-    "mac temp path": re.compile(r"/private/var/folders/|/var/folders/"),
-    "demo rtsp password": re.compile(r"rtsp://user:password"),
+    "local user path": re.compile(r"(?:file://)?/Users/[A-Za-z0-9._-]+"),
+    "mac temp path": re.compile(r"/(?:private/)?var/folders/"),
+    "demo rtsp password": re.compile("rtsp://" + "user:password"),
 }
 
 TEXT_SUFFIXES = {
