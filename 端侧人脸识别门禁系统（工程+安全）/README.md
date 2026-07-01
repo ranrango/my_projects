@@ -2,6 +2,18 @@
 
 > 纯 CPU 门禁系统：OpenCV Haar 检测 + LBP 特征识别 + 纹理活体检测 + 安全审计日志。零深度学习依赖，开箱即用。
 
+## 作品集展示
+
+![端侧门禁流程](../assets/face-gate/workflow.svg)
+
+| 维度 | 内容 |
+|---|---|
+| 技术定位 | 端侧身份识别、安全控制和审计闭环示范 |
+| 流程 | 人脸注册 -> 特征提取 -> 活体检测 -> 授权/拒绝 -> JSONL 审计 |
+| 验收 | `python validate_system.py`，当前自检 11/11 通过 |
+| 隐私 | `enrolled_faces/` 和 `audit_logs/` 不入库 |
+| 边界 | Haar+LBP 是 CPU 工程基线；生产识别率建议升级 ArcFace/MobileFaceNet ONNX |
+
 ## 系统架构
 
 ```

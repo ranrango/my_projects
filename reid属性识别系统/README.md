@@ -2,6 +2,18 @@
 
 这个文件夹实现的是一个基于 Market1501 数据集的行人重识别流程：读取行人裁剪图，训练 ResNet50 特征提取模型，用交叉熵损失和 Triplet Loss 学习行人身份特征，并在 query/gallery 上计算 mAP 与 Rank-k 检索指标。
 
+## 作品集展示
+
+![ReID 指标](../assets/reid/metrics.svg)
+
+| 维度 | 内容 |
+|---|---|
+| 技术定位 | 行人重识别训练、评估、图库检索与 API 服务 |
+| 指标记录 | Market1501 10 轮训练：mAP 0.5588，Rank-1 0.7957，Rank-5 0.9121，Rank-10 0.9362 |
+| 部署链路 | checkpoint -> gallery index -> CLI search -> FastAPI -> Docker |
+| 验收 | Python 脚本编译；toy Market1501 可跑通训练和评估链路 |
+| 边界 | toy 数据只验证链路；真实部署需业务摄像头数据重新定阈值 |
+
 ## 项目结构
 
 ```text
